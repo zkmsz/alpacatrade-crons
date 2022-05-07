@@ -4,7 +4,7 @@ const { alpaca, flatten } = require("./alpaca");
 const dailyProfitTarget = parseFloat(process.env.DAILY_PT);
 
 exports.closeDailyPositions = functions.pubsub
-  .schedule("54 13 * * 1-5")
+  .schedule("57 13 * * 1-5")
   .timeZone("America/Denver")
   .onRun((context) => {
     flatten(false, "daily close");
